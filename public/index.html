@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+   <head lang="en">
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width">
+      <title> WELCOME TO THE WORLD OF HEALTHY EATING PLATE </title>
+      <link rel="stylesheet" href="index.css">
+   </head>
+   <body>
+      <h1>WELCOME TO THE WORLD OF HEALTHY EATING PLATE</h1>
+      <div id="homepage">
+         <form action="/form" method="post" >
+            <header>
+               <article class="menubar">
+                  <ul class="menu">
+                     <li> <a href="#"> HOME</a> </li>
+                     <li><a href="#"> HEALTH TIPS</a></li>
+                     <li> <a href="#">MEAL PLAN</a> 
+                     </li>
+                     <li>
+                        <a href="#">RECIPES</a>
+                        <div class ="dropdown">
+                           <a href = "#">Chicken</a>
+                           <a href ="#"> Fish </a>
+                           <a href = "#">Lamb</a>
+                           <a href="#">Pork</a>
+                        </div>
+                     </li>
+                     <li>
+                        <a href="#">SETTINGS</a>
+                        <div class="dropdown">
+                           <a href="#"> File </a>
+                           <a href="#"> Edit </a>
+                           <a href="#"> Format</a>
+                        </div>
+                     </li>
+                  </ul>
+               </article>
+            </header>
+            <article class = "description">
+               <h>
+                  <img class="logo" src="foodplate.jpeg" alt="foodplate image" width="300" height="260">
+                  <div class="title">Cooking healthy can be a challenge for many seniors. Part of the struggle is finding good recipes that are easy to fix and fit into your healthy eating plan, whatever that may be. Whether you need low carb, sugar free, gluten-free or just something that consists of eating clean, unprocessed foods, we’ve got a roundup of the best websites that offer healthy recipes.The Food Network has a whole section of healthy recipes on their website. They include special collections of recipes, like Weeknight Dinners and Meals You Can Fix in Under an Hour. Additionally, the Food Network has sections for breakfast, lunch, and dinner, and different diets like low-carb and vegetarian. Don’t let that scare you if you’re only cooking for one or two. Simply make the recipe and save the leftovers, freezing extra portions so you can enjoy them at a later date. Bon Apetit!
+                  </div>
+               </h>
+            </article>
+            <main>
+               <article class="firstname">
+                  <p>
+                     <label for="firstname"> Name </label>
+                     <input type="text" id="firstname" name="firstname" pattern="[A-Za-z]{3,}" title="Should only contain 3 or more letters">
+                  </p>
+               </article>
+               <article class="selectAny">
+                  <p>
+                     <label for="selectAny">Choose a diet:</label>
+                     <select name="selectAny" id="selectAny">
+                        <option value="default">Please select any option below</option>
+                        <option value="rabbit1"> Keto</option>
+                        <option value="rabbit2">Intermittent fast </option>
+                        <option value="rabbit3">Low Carbs</option>
+                     </select>
+                  </p>
+               </article>
+               <article class="contact">
+                  <p>
+                     <label for="contact"> Phone No</label>
+                     <input type="text" id="contact" name="contact" pattern="[0-9]{10}" title="Should contain 10 digits">
+                  </p>
+               </article>
+               <article class="useremail">
+                  <p>
+                     <label for="useremail"> Email<span class="required"> *</span></label>
+                     <input type="text" id="useremail" name="useremail" required="required" pattern="[a-zA-Z0-9]{4,}@gmail.com" title="Atleast 4 characters or digit that ends with @gmail.com, e.g:name@gmail.com ">
+                  </p>
+               </article>
+               <article class="password">
+                  <p>
+                     <label for="password"> Password</label>
+                     <input type="password" id="password" name="password">
+                  </p>
+               </article>
+               <article class="answerme">
+                  <p>
+                     <label for="pets"> Do you like healthy food?</label>
+                     <input type="checkbox" id="yes" name="yes">
+                     <label for="yes"> yes </label>
+                     <input type="checkbox" id="no" name="no">
+                     <label for="no"> no </label>
+                  </p>
+               </article>
+               <div class="submit">
+                  <a href="form.html">
+                  <button class="clickme"> Submit </button>
+                  </a>
+               </div>
+            </main>
+            <footer>
+               I haven't downloaded any online images. I have uploaded images from my gallery.
+               <script src="index.js"></script>
+            </footer>
+      </div>
+      </form>
+   </body>
+</html>

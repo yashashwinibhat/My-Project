@@ -1,0 +1,247 @@
+/*styling and applying media queries to menubar*/
+header
+{
+  background-color:#717786;
+  grid-area:header; 
+  margin-top:-1.4em;
+}
+h1
+{
+  text-align: center;
+  background-color:#CBC3E3;
+  margin-top:-0.2em;
+}
+.menubar ul
+{
+  display:flex;
+  justify-content: space-around;
+  list-style-type: none;
+  padding:1em;
+
+}
+@media screen and (max-width:1024px)
+{
+  .menubar ul
+  {
+    padding:1.3em;
+  }
+}
+/*styling and applyinh queries to menu items*/
+.menu li
+{
+  padding-top:1rem;
+  padding-bottom: 1rem;
+  padding-left:1rem;
+  padding-right:1rem;
+  margin-top:-1rem;
+  margin-bottom:-1rem;
+  justify-content: space-around;
+  position:relative;         
+}
+.menu li a
+{
+  color:pink;
+}
+@media screen and (max-width:1024px)
+{
+  .menu li
+  {
+   font-size:1.6em;
+  }
+}
+.menu li a:hover,
+.menu li a:focus-within
+{
+ color:deeppink;
+}
+.menu li:hover,
+.menu li:focus-within
+{
+  background-color:white;
+}
+/*styling and applying queries to dropdown*/
+.dropdown
+{
+  position:absolute;
+
+  background-color:deeppink;
+  left:0em;
+  top:3em;
+  width:100%;
+
+  display:block;
+  opacity:.0;
+  overflow:hidden;
+  max-height:0em;
+  text-align:center;
+
+  transition:opacity 480ms linear,max-height 600ms linear;
+}
+.dropdown a
+{
+  display:block;
+  color:white;
+  text-align:center;
+  padding:0.4em ;
+}
+.menu li:hover .dropdown,
+.menu li:focus-within .dropdown
+{
+  display:block;
+
+  max-height:7.7em; 
+  opacity:1;
+  overflow:visible;
+}
+.dropdown a:hover
+{
+  background-color:#ADADC9;
+  color:pink;
+}
+.dropdown a:focus-within
+{
+  background-color:#ADADC9;
+  color:pink;
+}
+/*styling and applying queries to images and text */
+main
+{
+  background-color:#DCDBE4;
+  margin-top:-1.3em;
+  padding-bottom:5em;
+  margin-bottom:-6em;
+}
+.row
+{
+ display:flex;
+}
+@media screen and (max-width:1024px)
+{
+  .row
+  {
+    display:block;
+  }
+}
+h2
+{
+  text-align:center;
+  margin-bottom:2em;
+  padding-top:1em;
+  color:deeppink;
+  border-bottom:0.1em solid black;
+}
+
+div .content1
+{
+  text-align:justify;
+  display:block;
+  margin-right:5em;
+
+}
+@media screen and (max-width: 1024px)
+{
+  div .content1
+  {
+    font-size:0.9em;
+    margin-right:-0.5em;
+  }
+}
+.logo1
+{
+  margin-left:1em;
+}
+@media screen and (max-width: 1024px)
+{
+  .logo1
+  {
+   margin-left:15em;
+  }
+}
+div .content2
+{
+  text-align:justify;
+  display:block;
+  margin-left:-3em;
+  margin-right:11em;
+}
+@media screen and (max-width: 1024px)
+{
+  div .content2
+  {
+    font-size:0.9em;
+    margin-left:1em;
+    margin-right:-0.1em;
+  }
+}
+.logo2
+{
+  margin-left:-2em;
+}
+@media screen and (max-width: 1024px)
+{
+  .logo2
+  {
+    margin-left:15em;
+  }
+}
+div .content3
+{
+  text-align:justify;
+  display:block;
+  margin-left:-9em;
+  margin-right:3em;
+}
+@media screen and (max-width: 1024px)
+{
+  div .content3
+  {
+    font-size:0.9em;
+    margin-left:0.8em;
+    margin-right:-0.1em;
+  }
+}
+.logo3
+{
+  margin-left:-8em;
+}
+@media screen and (max-width: 1024px)
+{
+.logo3
+{
+  margin-left:14em;
+}
+}
+div .content4
+{
+  text-align:justify;
+  margin-left:-1em;
+}
+@media screen and (max-width: 1024px)
+{
+  div .content4
+  {
+    font-size:0.9em;
+    margin-left:-0.1em;
+  }
+}
+.logo4
+{
+  margin-right:0.4em;
+}
+@media screen and (max-width:1024px)
+{
+  .logo4
+  {
+    margin-left:14em;
+  }
+}
+/*styling and applying queries to footer*/
+footer
+{
+  padding:1em;
+  margin-top:5em;
+  text-align:center;
+  background-color:#717786;
+  color:white;
+  font-weight:bold;
+}

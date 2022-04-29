@@ -1,0 +1,128 @@
+div#homepage
+{
+  display:grid;
+  height:100vh;
+  grid-template-columns:0.4fr 1.2fr ;
+  grid-template-rows:0.1fr 0.3fr 0.1fr;
+  grid-template-areas:
+  "header header "
+  "menubar main  "
+  "footer footer "
+}
+h1
+{
+  text-align:center;
+  background-color:#CBC3E3;
+  margin-top:-0.2em;
+}
+header
+{
+  background-color:#717786;
+  grid-area:header; 
+}
+.menubar ul
+{
+  display:flex;
+  justify-content: space-around;
+  list-style-type: none;
+  padding:1em;
+  margin-top:-1.4em;
+
+}
+@media screen and (max-width:1024px)
+{
+  .menubar ul
+  {
+    padding:1.4em;
+  }
+}
+.menu li
+{
+  padding-top:1rem;
+  padding-bottom: 1rem;
+  padding-left:1rem;
+  padding-right:1rem;
+  margin-top:-1rem;
+  margin-bottom:-1rem;
+  justify-content: space-around;
+  position:relative;         
+}
+.menu li a
+{
+  color:pink;
+}
+@media screen and (max-width:1024px)
+{
+  .menu li
+  {
+    font-size:1.6em;
+  }
+}
+.menu li a:hover,
+.menu li a:focus-within
+{
+  color:deeppink;
+}
+.menu li:hover,
+.menu li:focus-within
+{
+  background-color:white;
+}
+.dropdown
+{
+  position:absolute;
+
+  background-color:deeppink;
+  left:0em;
+  top:3em;
+  width:100%;
+
+  display:block;
+  opacity:.0;
+  overflow:hidden;
+  max-height:0em;
+  text-align:center;
+
+  transition:opacity 480ms linear,max-height 600ms linear;
+}
+.dropdown a
+{
+  display:block;
+  color:white;
+  text-align:center;
+  padding:0.4em ;
+}
+.menu li:hover .dropdown,
+.menu li:focus-within .dropdown
+{
+  display:block;
+
+  max-height:7.7em; 
+  opacity:1;
+  overflow:visible;
+}
+.dropdown a:hover
+{
+  background-color:#ADADC9;
+  color:pink;
+}
+.dropdown a:focus-within
+{
+  background-color:#ADADC9;
+  color:pink;
+}
+.text
+{
+  text-align:center;
+  font-size:3em; 
+  padding:4em;
+  background-color:pink;
+  margin-top:-0.4em;
+}
+footer
+{
+  text-align:center;
+  padding:0.5em;
+  background-color:#717786;
+
+}

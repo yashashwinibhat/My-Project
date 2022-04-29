@@ -1,0 +1,265 @@
+/*styling and applying media queries for main-content*/
+main
+{
+    display:grid;
+    overflow-x:hidden;
+    background-color:#DCDBE4;
+    grid-template-rows:0.4fr 0.3fr 0.1fr 0.1fr;
+    grid-template-columns:1fr 1fr ;
+    column-gap:2em;
+    row-gap:1em;
+    grid-template-areas:
+    "heading heading"
+    "area1 area2 "
+    "area3 area4"
+    "area5 area6"
+}
+h1
+{
+  text-align:center;
+  background-color:#CBC3E3;
+  margin-top:-0.3em;
+}
+@media screen and (max-width:1024px)
+{
+  main
+  {
+     display:grid;
+     overflow-x:hidden;
+     word-spacing:normal;
+     grid-template-rows:0.1fr 0.1fr 0.1fr 0fr;
+     grid-template-columns: 0.2fr auto;
+     column-gap:3em;
+     grid-template-areas:
+     "heading heading"
+     "area1  area2 "
+     "area3 area4"
+     "area5 area6";
+  }
+}
+/*styling and applying media queries for heading and contents*/
+#heading
+{
+  grid-area:heading;
+  text-align:center;
+  font-weight: bold;
+  font-size:3em;
+  margin-bottom:0em;
+  color:#E0115F;
+}
+@media screen and (max-width:1024px)
+{
+  #heading
+  {
+   font-size:4em;
+  }
+}
+#content-1  
+{
+  grid-area:area1;
+  text-align: justify;
+  margin-bottom:2em;
+}
+@media screen and (max-width:1024px)
+{
+  #content-1
+  {
+    font-size:1.5em;
+  }
+}
+#content-2 
+{
+  grid-area:area2;
+  text-align: justify;
+}
+@media screen and (max-width:1024px)
+{
+  #content-2
+  {
+    font-size:1.5em;
+    text-align:justify;
+  }
+}
+.logo
+{
+    grid-area:area3;
+    margin-left:5em;
+}
+#content-4
+{
+  grid-area:area4;
+  margin-top:0em;
+  text-align: justify;
+}
+@media screen and (max-width:1024px)
+{
+
+   #content-4
+  {
+    font-size:1.5em;
+    text-align:justify;
+  }
+}
+#content-5
+{
+  grid-area:area5;
+  text-align:justify;
+  margin-top:1em;
+  margin-bottom:-2em;
+}
+@media screen and (max-width:1024px)
+{
+  #content-5
+  {
+   font-size:1.5em;
+   margin-bottom:-7em;
+  }
+}
+#content-6
+{
+  grid-area:area6;
+  text-align:justify;
+  margin-top:1em;
+  margin-bottom:-2em;
+}
+@media screen and (max-width:1024px)
+{
+  #content-6
+  {
+    font-size:1.5em;
+    margin-bottom:-7em;
+    text-align:justify;
+  }
+}
+header
+{
+  background-color:#717786;
+  grid-area: header;
+}
+/*styling and applying media queries for menubar */
+.menubar ul
+{
+  display:flex;
+  justify-content:space-around;
+  list-style-type:none;
+  margin-bottom:-0.1rem;
+  margin-top:-1.5em;
+}
+@media screen and (max-width:1024px)
+{
+  .menubar ul
+  {
+   padding:2em;
+  }
+}
+/*styling and applying media queries for menu-items*/
+.menu li 
+{
+  position:relative; 
+  justify-content:space-around;
+  text-align:center;  
+  padding:1rem;    
+}
+@media screen and (max-width:1024px)
+{
+  .menu li
+  {
+   font-size:2.5em;
+  }
+}
+.menu li a
+{
+  color:pink;
+}
+.menu li:hover,
+.menu li:focus-within
+{
+ background-color:white;
+}
+.menu li a:hover,
+.menu li a:focus-within
+{
+  color:deeppink;
+}
+/*styling and applying media queries for dropdown menu*/
+.dropdown
+{
+  position:absolute;
+
+  background-color:deeppink;
+  left:0em;
+  top:3em;
+  width:100%;
+
+  display:block;
+  opacity:.0;
+  overflow:hidden;
+  max-height:0em;
+  text-align:center;
+
+  transition:opacity 480ms linear,max-height 600ms linear;
+}
+.dropdown a
+{
+  display:block;
+  color:white;
+  text-align:center;
+  padding:0.4em ;
+}
+.menu li:hover .dropdown,
+.menu li:focus-within .dropdown
+{
+  display:block;
+
+  max-height:7.7em; 
+  opacity:1;
+  overflow:visible;
+}
+.dropdown a:hover
+{
+  background-color:#ADADC9;
+  color:pink;
+}
+.dropdown a:focus-within
+{
+  background-color:#ADADC9;
+  color:pink;
+}
+/*styling the footer*/
+footer
+{
+  padding:1em;
+  text-align:center;
+  color:white;
+  font-weight:bold;
+  background-color:#717786;
+}
+@media screen and (max-width:1024px)
+{
+  footer
+  {
+   font-size:1.6em;
+  }
+}
+/*styling the button*/
+.clickme
+{
+  padding:0.4rem;
+  font-size:1.2em;
+  width:10%;
+  background-color:lavenderblush
+  font-family:bold;
+  color:black;
+  background-color:lavenderblush;
+}
+@media screen and (max-width:1024px)
+{
+  .clickme
+  {
+   font-size:1.6em;
+   width:20%;
+   background-color:lavenderblush;
+  }
+}
+
+  

@@ -1,0 +1,352 @@
+#wrapper
+{
+  display:grid;
+  height:100vh;
+}
+h1 
+{
+ color:black;
+ text-align: center;
+ background-color:#CBC3E3; 
+ margin-top:-0.2em;
+}
+.required
+{
+ color:red;
+}
+/*styimg the labels and fields */
+main
+{
+  display:grid;
+  background-color:#DCDBE4;
+  grid-template-columns:4fr 4fr;
+  grid-template-rows:0.6fr 0.6fr 0.6fr 0.6fr;
+  grid-template-areas:
+  "firstname useremail "
+  "contact   password "
+  "selectAny answerme "
+  "submit    submit ";
+}
+header
+{
+  background-color:#717786;
+  grid-area: header;
+}
+/*styling and applying media queries to menubar */
+.menubar ul
+{
+  display:flex;
+  justify-content:space-around;
+  list-style-type:none;
+  margin-bottom:1rem;
+  margin-top:-1.3em; 
+  border-top:0.13em solid black; 
+  border-left:0.13em solid black;
+  border-right:0.13em solid black; 
+}
+@media screen and (max-width:1024px)
+{
+  .menubar ul
+  {
+   padding:2em;
+  }
+}
+/*styling and applying media queries to menu-items */
+.menu li 
+{
+  position:relative; 
+  justify-content:space-around;
+  text-align:center;  
+  padding:1rem;     
+}
+@media screen and (max-width:1024px)
+{
+  .menu li
+  {
+   font-size:2em;
+  }
+}
+.menu li a
+{
+color:pink;
+}
+.menu li:hover,
+.menu li:focus-within
+{
+ background-color:white;
+}
+.menu li a:hover,
+.menu li a:focus-within
+{
+ color:deeppink;
+}
+/*styling and applying media queries to dropdown menu */
+.dropdown
+{
+  position:absolute;
+
+  background-color:deeppink;
+  left:0em;
+  top:3em;
+  width:100%;
+
+  display:block;
+  opacity:.0;
+  overflow:hidden;
+  max-height:0em;
+  text-align:center;
+
+  transition:opacity 480ms linear,max-height 600ms linear;
+}
+.dropdown a
+{
+  display:block;
+  color:white;
+  text-align:center;
+  padding:0.4em ;
+}
+.menu li:hover .dropdown,
+.menu li:focus-within .dropdown
+{
+  display:block;
+
+  max-height:7.7em; 
+  opacity:1;
+  overflow:visible;
+}
+.dropdown a:hover
+{
+  background-color:#ADADC9;
+  color:pink;
+}
+.dropdown a:focus-within
+{
+  background-color:#ADADC9;
+  color:pink;
+}
+label
+{
+ font-weight:bold;
+}
+/*styling the content*/
+.description
+{
+  text-align:center;
+  padding:1em;
+  margin-top:-1em;
+  border-left:0.13em solid black; 
+  border-right:0.13em solid black; 
+  display:inline-block;
+  background-color:#DCDBE4;
+}
+.title
+{
+  padding:0.4em;
+  text-align:justify;
+}
+@media screen and (max-width:1024px)
+{
+  .title
+  {
+    font-size:1.2em;  
+    text-align:justify;
+  }
+}
+/*styling and applying media queries to labels and input */
+main
+{
+  border-left:0.13em solid black; 
+  border-right:0.13em solid black; 
+}
+.firstname
+{
+  padding:1em;
+  margin-top:-0.1em; 
+  text-align:right;
+  grid-area:firstname; 
+  background-color:#DCDBE4;
+  list-style:none;
+}
+#firstname
+{
+  width:48%;
+  margin-left:3.5em;
+}
+@media screen and (max-width:1024px)
+{
+  .firstname
+  {
+    font-size:2em; 
+    text-align:right;
+  }
+  input#firstname
+  {
+   border-right:0.1em solid black;
+  }
+}
+.useremail
+{
+  padding:1em;
+  margin-top:-0.2em;
+  text-align:left;
+  grid-area:useremail; 
+  background-color:#DCDBE4;
+  list-style:none;
+}
+input#useremail
+{
+  width:48%;
+  margin-left:2em;
+}
+@media screen and (max-width:1024px)
+{
+  .useremail
+  {
+    font-size:2em; 
+    text-align:left;
+  }
+  input#useremail
+  {
+   border-right:0.1em solid black;
+  }
+}
+.contact
+{
+  padding:1em;
+  text-align:right;
+  grid-area:contact; 
+  background-color:#DCDBE4;
+  list-style:none;
+}
+input#contact
+{
+  width:48%;
+  margin-left:2.5em;
+}
+@media screen and (max-width:1024px)
+{
+  .contact
+  {
+    font-size:2em; 
+    text-align:right;
+  }
+  input#contact
+  {
+   border-right:0.1em solid black;
+  }
+}
+.password
+{
+  padding:1em;
+  text-align:left;
+  grid-area:password; 
+  background-color:#DCDBE4;
+  list-style:none;
+}
+input#password
+{
+  width:48%;
+  margin-left:1.2em;
+}
+@media screen and (max-width:1024px)
+{
+  .password
+  {
+    font-size:2em; 
+    text-align:left;
+  }
+  input#password
+  {
+    width:46%;
+    border-right:0.1em solid black;
+  }
+}
+.selectAny
+{
+  padding:1em;
+  text-align:right; 
+  grid-area:selectAny; 
+  background-color:#DCDBE4;
+  list-style:none;
+}
+select#selectAny
+{
+ width:50% !important;
+}
+@media screen and (max-width:1024px)
+{
+  .selectAny
+  {
+    font-size:1.8em; 
+    text-align:right;
+  }
+  select#selectAny
+  {
+   width:50% !important;
+  }
+}
+.answerme
+{
+  padding:1em;
+  text-align:left;
+  grid-area:answerme; 
+  background-color:#DCDBE4;
+}
+@media screen and (max-width:1024px)
+{
+  .answerme
+  {
+    font-size:1.6em; 
+    text-align:left;
+  }
+}
+/*styling and applying media queries to footer */
+.submit
+{
+  padding:1.4rem;
+  grid-area:submit; 
+  background-color:#DCDBE4;
+  text-align:center;
+  font-family:bold;
+  color:pink;
+}
+@media screen and (max-width:1024px)
+{
+  .submit
+  {
+    font-size:1.8em; 
+    text-align:center;
+  }
+}
+/*styling and applying media queries to button */
+.clickme
+{
+  font-size:1.2em;
+  background-color:pink;
+}
+footer
+{
+  padding:1em;
+  border-bottom:0.13em solid black;
+  border-left:0.13em solid black; 
+  border-right:0.13em solid black; 
+  border-top:0.13em solid black; 
+  font-style:bold;
+  text-align:center;
+  background-color:#717786;
+  color:white;
+}
+@media screen and (max-width:1024px)
+{
+  footer
+  {
+  font-size:1.8em; 
+  text-align:center;
+  margin-top:-0.3em;
+  }
+}
+
+
+
+
+
